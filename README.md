@@ -14,7 +14,6 @@ Things to do to setup a machine from a clean Ubuntu/Pop!_OS install:
     sudo add-apt-repository ppa:rmescandon/yq ppa:neovim-ppa/stable
     sudo apt-get update
     sudo apt-get install -y neovim keepassxc fzf fd-find zoxyde tree tldr jq yq stow
-    ln -s $(which fdfind) ~/.local/bin/fd
     tldr --update
     git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com
     sudo chown --recursive root:root /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com/

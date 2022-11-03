@@ -111,6 +111,9 @@ fi
 # Set (neo)vim as editor of choice
 export EDITOR=vim
 
+# For nvim to find its config
+export XDG_CONFIG_HOME=$HOME/.config
+
 # Enable starship prompt
 eval "$(starship init bash)"
 
@@ -118,6 +121,3 @@ eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
 alias fd=fdfind
-
-# For nvim to find its config
-export XDG_CONFIG_HOME=$HOME/.config
