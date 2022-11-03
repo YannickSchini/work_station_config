@@ -30,16 +30,13 @@ return require('packer').startup(function(use)
         config = [[require("setup/treesitter")]]
     }
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim',
+        as = 'telescope',
+        tag = '0.1.0',
         requires = {
             {'nvim-lua/plenary.nvim'},
             { 'nvim-tree/nvim-web-devicons' }
-        },
-        config = function()
-            vim.keymap.set("n", "<Leader>gf", ":Telescope git_files<CR>")
-            vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>")
-            vim.keymap.set("n", "<Leader>rg", ":Telescope live_grep<CR>")
-        end
+        }
     }
         if bootstrap then
         require("packer").sync()
