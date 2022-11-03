@@ -16,6 +16,14 @@ return require('packer').startup(function(use)
     use 'tpope/vim-commentary'
     use 'tpope/vim-fugitive'
     use {
+        'ggandor/leap.nvim',
+        as = 'leap',
+        requires = 'tpope/vim-repeat',
+        config = function()
+            require('leap').add_default_mappings()
+        end
+    }
+    use {
         'ruifm/gitlinker.nvim',
         as = "gitlinker",
         requires = 'nvim-lua/plenary.nvim',
