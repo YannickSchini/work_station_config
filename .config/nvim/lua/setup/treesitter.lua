@@ -8,6 +8,9 @@ local parsers = {
     "rust",
     "toml",
     "yaml",
+    "sql",
+    "make",
+    "bash",
 }
 
 require("nvim-treesitter.configs").setup({
