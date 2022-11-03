@@ -16,6 +16,10 @@ return require('packer').startup(function(use)
     use 'tpope/vim-commentary'
     use 'tpope/vim-fugitive'
     use {
+        'goolord/alpha-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
+    use {
         'ggandor/leap.nvim',
         as = 'leap',
         requires = 'tpope/vim-repeat',
