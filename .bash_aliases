@@ -1,5 +1,6 @@
 # Utils
 
+alias v=nvim
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
