@@ -14,6 +14,15 @@ return require('packer').startup(function(use)
     use 'morhetz/gruvbox'
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
+    use 'tpope/vim-fugitive'
+    use {
+        'ruifm/gitlinker.nvim',
+        as = "gitlinker",
+        requires = 'nvim-lua/plenary.nvim',
+        config = function()
+            require("gitlinker").setup()
+        end
+    }
     use 'Pocco81/auto-save.nvim'
     use 'lukas-reineke/indent-blankline.nvim'
     use {
@@ -34,7 +43,7 @@ return require('packer').startup(function(use)
         as = 'telescope',
         tag = '0.1.0',
         requires = {
-            {'nvim-lua/plenary.nvim'},
+            { 'nvim-lua/plenary.nvim' },
             { 'nvim-tree/nvim-web-devicons' }
         }
     }
