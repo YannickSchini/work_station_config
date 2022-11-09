@@ -19,6 +19,10 @@ Things to do to setup a machine from a clean Ubuntu/Pop!_OS install:
     sudo chown --recursive root:root /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com/
     gnome-extensions enable clipboard-indicator@tudmotu.com
     curl -sS https://starship.rs/install.sh | sh
+    curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt-get install -y nodejs
+    sudo apt install python3-pip
+    pip3 install jedi-language-server
+    sudo cp ~/.local/bin/jedi-language-server /usr/bin/
     ```
 - Setup my bash aliases and all other config as explained above
     ```bash
