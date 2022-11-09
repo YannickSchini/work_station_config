@@ -2,6 +2,7 @@
 vim.keymap.set("n", "<Leader>gf", ":Telescope git_files<CR>")
 vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<Leader>rg", ":Telescope live_grep<CR>")
+vim.keymap.set("n", "<Leader>b", ":Telescope buffers<CR>")
 
 -- Configuration so that find_files gets all the hidden files except for the .git folder
 local telescope = require("telescope")

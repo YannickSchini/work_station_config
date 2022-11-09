@@ -51,6 +51,10 @@ return require('packer').startup(function(use)
         config = [[require("setup/treesitter")]]
     }
     use {
+        'nvim-treesitter/nvim-treesitter-context',
+        requires = 'nvim-treesitter'
+    }
+    use {
         'nvim-telescope/telescope.nvim',
         as = 'telescope',
         tag = '0.1.0',
@@ -59,6 +63,41 @@ return require('packer').startup(function(use)
             { 'nvim-tree/nvim-web-devicons' }
         }
     }
+    use {
+        'L3MON4D3/LuaSnip',
+        as = 'luasnip',
+        config = [[require("setup/luasnip")]]
+    }
+    use {
+        "hrsh7th/nvim-cmp",
+        as = "cmp",
+        requires = {
+            { "luasnip" },
+            { "hrsh7th/cmp-buffer" },
+            { "hrsh7th/cmp-nvim-lsp" },
+            { "hrsh7th/cmp-nvim-lua" },
+            { "onsails/lspkind.nvim", as = "lspkind" },
+            -- { "simrat39/rust-tools.nvim", as = "rust-tools" }
+        },
+        config = [[require("setup/cmp")]],
+        after = "lsp-config"
+    }
+    use {
+        "neovim/nvim-lspconfig",
+        as = "lsp-config",
+        requires = {
+            { "williamboman/mason.nvim", as = "mason" },
+            { "williamboman/mason-lspconfig.nvim", as = "mason-lspconfig" },
+        },
+        config = [[require("setup/lsp")]]
+    }
+    -- use {    -- Unsure about this one, will have to wait until I have a proper codebase to test this on to see if it provides value
+    --     'anuvyklack/pretty-fold.nvim',
+    --     config = function()
+    --         require('pretty-fold').setup()
+    --     end
+    -- }
+
         if bootstrap then
         require("packer").sync()
     end
