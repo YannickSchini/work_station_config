@@ -5,6 +5,17 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias grep=rg
+
+# Kubectl
+# TODO
+
+# Docker
+# TODO
+
+# Terraform
+# TODO
+
 # Git
 # Taken from the oh-my-zsh project, there are more there, don't hesitate to go take a look!
 # Source: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
