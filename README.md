@@ -32,3 +32,11 @@ Things to do to setup a machine from a clean Ubuntu/Pop!_OS install:
 - Install Docker and perform the installation step to not have to use `sudo` each time
 - Install uLauncher and the firefox extension
 - Configure the tiling manager to enable tiling by default, and add an exception for uLauncher
+
+# TODO
+
+- Finish the bépo keymaps
+    - Handle buffer-related movements
+    - Check all the plugins for potentially conflicting keymaps
+- Fix the "insert tab in text" issue
+- Check why ligatures don’t seem to work (probably not a nvim issue though)
