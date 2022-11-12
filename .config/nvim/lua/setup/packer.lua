@@ -11,19 +11,26 @@ end
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+
     use 'morhetz/gruvbox'
+
     use 'tpope/vim-surround'
+
     use 'tpope/vim-commentary'
+
     use 'tpope/vim-fugitive'
+
     use {
         'goolord/alpha-nvim',
         requires = { 'nvim-tree/nvim-web-devicons' }
     }
+
     use {
         'ggandor/leap.nvim',
         as = 'leap',
         requires = 'tpope/vim-repeat'
     }
+
     use {
         'ruifm/gitlinker.nvim',
         as = "gitlinker",
@@ -32,25 +39,32 @@ return require('packer').startup(function(use)
             require("gitlinker").setup()
         end
     }
+
     use 'Pocco81/auto-save.nvim'
+
     use 'lukas-reineke/indent-blankline.nvim'
+
     use {
         'akinsho/bufferline.nvim',
         tag = "v1.*",
         requires = 'nvim-tree/nvim-web-devicons'
     }
+
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+
     use {
         'nvim-treesitter/nvim-treesitter',
         config = [[require("setup/treesitter")]]
     }
+
     use {
         'nvim-treesitter/nvim-treesitter-context',
         requires = 'nvim-treesitter'
     }
+
     use {
         'nvim-telescope/telescope.nvim',
         as = 'telescope',
@@ -60,11 +74,13 @@ return require('packer').startup(function(use)
             { 'nvim-tree/nvim-web-devicons' }
         }
     }
+
     use {
         'L3MON4D3/LuaSnip',
         as = 'luasnip',
         config = [[require("setup/luasnip")]]
     }
+
     use {
         "hrsh7th/nvim-cmp",
         as = "cmp",
@@ -79,6 +95,7 @@ return require('packer').startup(function(use)
         config = [[require("setup/cmp")]],
         after = "lsp-config"
     }
+
     use {
         "neovim/nvim-lspconfig",
         as = "lsp-config",
@@ -88,6 +105,7 @@ return require('packer').startup(function(use)
         },
         config = [[require("setup/lsp")]]
     }
+
     -- use {    -- Unsure about this one, will have to wait until I have a proper codebase to test this on to see if it provides value
     --     'anuvyklack/pretty-fold.nvim',
     --     config = function()
