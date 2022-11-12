@@ -22,10 +22,7 @@ return require('packer').startup(function(use)
     use {
         'ggandor/leap.nvim',
         as = 'leap',
-        requires = 'tpope/vim-repeat',
-        config = function()
-            require('leap').add_default_mappings()
-        end
+        requires = 'tpope/vim-repeat'
     }
     use {
         'ruifm/gitlinker.nvim',

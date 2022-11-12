@@ -2,11 +2,6 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 require("table")
 
-local has_words_before = function()
-  local cursor = vim.api.nvim_win_get_cursor(0)
-  return not vim.api.nvim_get_current_line():sub(1, cursor[2]):match('^%s$')
-end
-
 cmp.setup({
     snippet = {
         expand = function(args)
@@ -36,8 +31,6 @@ cmp.setup({
                 cmp.select_next_item()
             elseif luasnip.expand_or_jumpable() then
                 luasnip.expand_or_jump()
-            elseif has_words_before() then
-                cmp.complete()
             else
                 fallback()
             end
