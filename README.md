@@ -35,6 +35,4 @@ Things to do to setup a machine from a clean Ubuntu/Pop!_OS install:
 
 # TODO
 
-- Finish the bépo keymaps
-    - Handle buffer-related movements
 - Check why ligatures don’t seem to work (probably not a nvim issue though)

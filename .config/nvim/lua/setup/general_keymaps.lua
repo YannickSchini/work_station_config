@@ -62,9 +62,18 @@ if Bepo then
     -- vim.keymap.set("n", "wo", "<C-w>s")
     -- vim.keymap.set("n", "wp", "<C-w>o")
 
-
     -- Remapper è en "début de ligne"
     -- ——————————————————————————————
     vim.keymap.set("n", "è", "^")
     vim.keymap.set("n", "È", "0")
+
+    -- Mouvement dans les buffers
+    -- ——————————————————————————————
+    vim.keymap.set("n", "<leader>y", ":bprev<CR>", { silent = true })
+    vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { silent = true })
+    vim.keymap.set("n", "<leader>.", ":bnext<CR>", { silent = true })
+else
+    vim.keymap.set("n", "<leader>x", ":bprev<CR>", { silent = true })
+    vim.keymap.set("n", "<leader>c", ":bdelete<CR>", { silent = true })
+    vim.keymap.set("n", "<leader>v", ":bnext<CR>", { silent = true })
 end

@@ -1,3 +1,3 @@
 require("setup.set")
 require("setup.packer")
-require("setup.bepo_keymaps")
+require("setup.general_keymaps")
