@@ -121,3 +121,9 @@ eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
 alias fd=fdfind
+
+change_background () {
+    gsettings set org.gnome.desktop.background picture-uri-dark file:///$(ls ~/Pictures/wallpapers/*.jpg -1 | sort -R | head -1)
+}
+
+change_background
