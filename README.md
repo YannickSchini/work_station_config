@@ -23,6 +23,11 @@ Things to do to setup a machine from a clean Ubuntu/Pop!_OS install:
     sudo apt install python3-pip
     pip3 install jedi-language-server
     sudo cp ~/.local/bin/jedi-language-server /usr/bin/
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+    ln -s ~/.local/kitty.app/bin/kitty ~/.local/bin/
+    cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
+    sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
+    sed -i "s|Exec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
     ```
 - Setup my bash aliases and all other config as explained above
     ```bash
@@ -32,7 +37,3 @@ Things to do to setup a machine from a clean Ubuntu/Pop!_OS install:
 - Install Docker and perform the installation step to not have to use `sudo` each time
 - Install uLauncher and the firefox extension
 - Configure the tiling manager to enable tiling by default, and add an exception for uLauncher
-
-# TODO
-
-- Check why ligatures don’t seem to work (probably not a nvim issue though)
