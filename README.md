@@ -35,7 +35,9 @@ Things to do to setup a machine from a clean Ubuntu/Pop!_OS install:
     stow --ignore=\.git.\* --target ~
     ```
 - Install Docker and perform the installation step to not have to use `sudo` each time
-- Install uLauncher and the firefox extension
+- Install uLauncher and extensions:
+    - the [firefox extension](https://github.com/KuenzelIT/ulauncher-firefox-bookmarks)
+    - the [window switcher extension](https://github.com/beajeanm/ulauncher-windows-switcher)
 - Configure the tiling manager to enable tiling by default, and add an exception for uLauncher
 - Remove LibreOffice
     ```bash
