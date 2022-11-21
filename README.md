@@ -11,9 +11,10 @@ Things to do to setup a machine from a clean Ubuntu/Pop!_OS install:
 - Install all the dependencies with the script below
     ```bash
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CC86BB64
-    sudo add-apt-repository ppa:rmescandon/yq ppa:neovim-ppa/stable
+    sudo add-apt-repository ppa:neovim-ppa/stable
+    sudo add-apt-repository ppa:rmescandon/yq
     sudo apt-get update
-    sudo apt-get install -y neovim keepassxc fzf fd-find zoxyde tree tldr jq yq stow
+    sudo apt-get install -y neovim keepassxc fzf fd-find zoxide tree tldr jq yq stow ripgrep
     tldr --update
     git clone https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator.git /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com
     sudo chown --recursive root:root /usr/share/gnome-shell/extensions/clipboard-indicator@tudmotu.com/
@@ -28,6 +29,7 @@ Things to do to setup a machine from a clean Ubuntu/Pop!_OS install:
     cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
     sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
     sed -i "s|Exec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty --title kitty|g" ~/.local/share/applications/kitty*.desktop
+    sed -i "s|TryExec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
     ```
 - Setup my bash aliases and all other config as explained above
     ```bash
