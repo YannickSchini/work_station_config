@@ -14,7 +14,14 @@ alias grep=rg
 # TODO
 
 # Terraform
-# TODO
+# Taken from the oh-my-zsh project, there are more there, don't hesitate to go take a look!
+# Source: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/terraform/terraform.plugin.zsh
+alias tf='terraform'
+alias tfa='terraform apply'
+alias tff='terraform fmt'
+alias tfi='terraform init'
+alias tfp='terraform plan'
+alias tfv='terraform validate'
 
 # Git
 # Taken from the oh-my-zsh project, there are more there, don't hesitate to go take a look!
