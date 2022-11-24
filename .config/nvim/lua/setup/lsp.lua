@@ -7,7 +7,7 @@ local servers = {
     "jedi_language_server",
     "rust_analyzer",
     "sumneko_lua",
-    -- "terraformls",
+    "terraformls",
     "yamlls",
 }
 
