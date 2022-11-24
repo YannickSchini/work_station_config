@@ -90,7 +90,7 @@ return require('packer').startup(function(use)
             { "hrsh7th/cmp-nvim-lsp" },
             { "hrsh7th/cmp-nvim-lua" },
             { "onsails/lspkind.nvim", as = "lspkind" },
-            -- { "simrat39/rust-tools.nvim", as = "rust-tools" }
+            { "simrat39/rust-tools.nvim", as = "rust-tools" }
         },
         config = [[require("setup/cmp")]],
         after = "lsp-config"

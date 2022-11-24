@@ -48,13 +48,13 @@ for _, server in ipairs(servers) do
             on_attach = on_attach,
             capabilities = capabilities
         })
-    -- elseif server == "rust_analyzer" then
-    --     require('rust-tools').setup({
-    --         server = {
-    --             on_attach = on_attach,
-    --             capabilities = capabilities
-    --         }
-    --     })
+    elseif server == "rust_analyzer" then
+        require('rust-tools').setup({
+            server = {
+                on_attach = on_attach,
+                capabilities = capabilities
+            }
+        })
     else
         lspconfig[server].setup({
             on_attach = on_attach,
