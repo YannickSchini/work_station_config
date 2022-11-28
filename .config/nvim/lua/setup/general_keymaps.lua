@@ -40,8 +40,8 @@ if Bepo then
     -- {HJKL} <- [CTSR]
     -- ————————————————
     -- {J} = « Jusqu'à »            (j = suivant, J = précédant)
-    vim.keymap.set("n", "j", "t")
-    vim.keymap.set("n", "J", "T")
+    vim.keymap.set({"n", "o"}, "j", "t")
+    vim.keymap.set({"n", "o"}, "J", "T")
     -- {L} = « Change »             (l = attend un mvt, L = jusqu'à la fin de ligne)
     vim.keymap.set("n", "l", "c")
     vim.keymap.set("n", "L", "C")
