@@ -120,6 +120,11 @@ eval "$(starship init bash)"
 # Enable zoxide
 eval "$(zoxide init bash)"
 
+# Enable Pyenv
+export PYENV_ROOT=$HOME/.pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 alias fd=fdfind
 
 change_background () {
