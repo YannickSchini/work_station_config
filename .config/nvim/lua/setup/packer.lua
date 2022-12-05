@@ -26,12 +26,6 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'ggandor/leap.nvim',
-        as = 'leap',
-        requires = 'tpope/vim-repeat'
-    }
-
-    use {
         'ruifm/gitlinker.nvim',
         as = "gitlinker",
         requires = 'nvim-lua/plenary.nvim',
