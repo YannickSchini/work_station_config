@@ -1,3 +1,5 @@
+vim.keymap.set({"n", "v"}, "<leader>pa", ":echo expand('%:p')<CR>")
+
 if Bepo then
     -- Source: https://bepo.fr/wiki/Vim
 
