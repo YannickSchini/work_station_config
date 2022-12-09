@@ -56,12 +56,12 @@ if Bepo then
 
     -- Remaper la gestion des fenêtres
     -- ———————————————————————————————
-    -- vim.keymap.set("n", "wt", "<C-w>j")
-    -- vim.keymap.set("n", "ws", "<C-w>k")
-    -- vim.keymap.set("n", "wc", "<C-w>h")
-    -- vim.keymap.set("n", "wr", "<C-w>l")
-    -- vim.keymap.set("n", "wd", "<C-w>c")
-    -- vim.keymap.set("n", "wo", "<C-w>s")
+    vim.keymap.set("n", "wt", "<C-w>j")
+    vim.keymap.set("n", "ws", "<C-w>k")
+    vim.keymap.set("n", "wc", "<C-w>h")
+    vim.keymap.set("n", "wr", "<C-w>l")
+    vim.keymap.set("n", "wd", "<C-w>c")
+    vim.keymap.set("n", "wo", "<C-w>s")
     -- vim.keymap.set("n", "wp", "<C-w>o")
 
     -- Remapper è en "début de ligne"
@@ -71,11 +71,11 @@ if Bepo then
 
     -- Mouvement dans les buffers
     -- ——————————————————————————————
-    vim.keymap.set("n", "<leader>y", ":bprev<CR>", { silent = true })
-    vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { silent = true })
-    vim.keymap.set("n", "<leader>.", ":bnext<CR>", { silent = true })
+    vim.keymap.set("n", "<Leader>à", ":bprev<cr>", { silent = true })
+    vim.keymap.set("n", "<Leader>y", ":bdelete<CR>", { silent = true })
+    vim.keymap.set("n", "<Leader>.", ":bnext<CR>", { silent = true })
 else
-    vim.keymap.set("n", "<leader>x", ":bprev<CR>", { silent = true })
-    vim.keymap.set("n", "<leader>c", ":bdelete<CR>", { silent = true })
-    vim.keymap.set("n", "<leader>v", ":bnext<CR>", { silent = true })
+    vim.keymap.set("n", "<Leader>w", ":bprev<CR>", { silent = true })
+    vim.keymap.set("n", "<Leader>x", ":bdelete<CR>", { silent = true })
+    vim.keymap.set("n", "<Leader>v", ":bnext<CR>", { silent = true })
 end
