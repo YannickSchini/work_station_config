@@ -127,6 +127,8 @@ eval "$(pyenv virtualenv-init -)"
 
 alias fd=fdfind
 
+source /usr/share/doc/fzf/examples/key-bindings.bash
+
 change_background () {
     gsettings set org.gnome.desktop.background picture-uri-dark file:///$(ls ~/Pictures/wallpapers/*.jpg -1 | sort -R | head -1)
 }
