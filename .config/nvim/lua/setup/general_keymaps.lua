@@ -51,14 +51,14 @@ if Bepo then
     vim.keymap.set({"n", "o"}, "j", "t")
     vim.keymap.set({"n", "o"}, "J", "T")
     -- {L} = « Change »             (l = attend un mvt, L = jusqu'à la fin de ligne)
-    vim.keymap.set("n", "l", "c")
-    vim.keymap.set("n", "L", "C")
+    vim.keymap.set({"n", "v"}, "l", "c")
+    vim.keymap.set({"n", "v"}, "L", "C")
     -- {H} = « Remplace »           (h = un caractère slt, H = reste en « Remplace »)
-    vim.keymap.set("n", "h", "r")
-    vim.keymap.set("n", "H", "R")
+    vim.keymap.set({"n", "v"}, "h", "r")
+    vim.keymap.set({"n", "v"}, "H", "R")
     -- {K} = « Substitue »          (k = caractère, K = ligne)
-    vim.keymap.set("n", "k", "s")
-    vim.keymap.set("n", "K", "S")
+    vim.keymap.set({"n", "v"}, "k", "s")
+    vim.keymap.set({"n", "v"}, "K", "S")
 
     -- Remaper la gestion des fenêtres
     -- ———————————————————————————————
