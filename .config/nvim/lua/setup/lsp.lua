@@ -4,8 +4,6 @@ local servers = {
     "bashls",
     "dockerls",
     "jsonls",
-    "jedi_language_server",
-    "pylsp",
     "pyright",
     "rust_analyzer",
     "sumneko_lua",
@@ -20,7 +18,7 @@ require("mason-lspconfig").setup({
 
 local options = { noremap = true, silent = true }
 
--- vim.api.nvim_set_keymap('n', "<Leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", options)
+vim.api.nvim_set_keymap('n', "<Leader>dD", "<cmd>lua vim.diagnostic.open_float()<CR>", options)
 -- vim.api.nvim_set_keymap('n', "<Leader>E", "<cmd>lua vim.diagnostic.setloclist()<CR>", options)
 vim.api.nvim_set_keymap('n', "<Leader>dp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", options)
 vim.api.nvim_set_keymap('n', "<Leader>dn", "<cmd>lua vim.diagnostic.goto_next()<CR>", options)
@@ -48,6 +46,7 @@ local get_root_dir = function(filename, _)
 end
 
 for _, server in ipairs(servers) do
+
     if server == 'sumneko_lua' then
         lspconfig[server].setup({
             settings = {
@@ -60,6 +59,7 @@ for _, server in ipairs(servers) do
             on_attach = on_attach,
             capabilities = capabilities
         })
+
     elseif server == "rust_analyzer" then
         require('rust-tools').setup({
             server = {
@@ -67,65 +67,15 @@ for _, server in ipairs(servers) do
                 capabilities = capabilities
             }
         })
+
     elseif server == "pyright" then
 		server_opts = {
 			root_dir = get_root_dir,
-			cmd = { "pyright-langserver", "--stdio" },
-			settings = {
-				pyright = {
-					disableLanguageServices = true,
-				},
-				python = {
-					analysis = {
-						autoImportCompletions = true,
-					},
-				},
-			},
 			capabilities = capabilities,
 			on_attach = on_attach,
 		}
 		lspconfig[server].setup(server_opts)
-	elseif server == "pylsp" then
-		server_opts = {
-			root_dir = get_root_dir,
-			-- NOTE: See https://pypi.org/project/python-lsp-server/
-			-- Install all optional providers: pip install "python-lsp-server[all]"
-			cmd = { "pylsp" },
-			settings = {
-				pylsp = {
-					configurationSources = { "flake8" },
-					plugins = {
-						pycodestyle = { enabled = false },
-						mccabe = { enabled = false },
-						pyflakes = { enabled = false },
-						yapf = { enabled = true },
-						autopep8 = { enabled = false },
-						flake8 = {
-							enabled = true,
-							maxLineLength = 120,
-						},
-						jedi_completion = { enabled = false },
-						rope_completion = { enabled = false },
-					},
-				},
-			},
-			capabilities = capabilities,
-			on_attach = on_attach,
-		}
-		lspconfig[server].setup(server_opts)
-	elseif server == "jedi_language_server" then
-		server_opts = {
-			root_dir = get_root_dir,
-			cmd = { "jedi-language-server" },
-			init_options = {
-				diagnostics = {
-					enable = false,
-				},
-			},
-			capabilities = capabilities,
-			on_attach = on_attach,
-		}
-		lspconfig[server].setup(server_opts)
+
     else
         lspconfig[server].setup({
             on_attach = on_attach,
