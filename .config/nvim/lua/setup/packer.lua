@@ -34,7 +34,12 @@ return require('packer').startup(function(use)
         end
     }
 
-    use 'Pocco81/auto-save.nvim'
+    use {
+        "Pocco81/auto-save.nvim",
+        config = function()
+            require("auto-save").setup()
+        end
+    }
 
     use 'lukas-reineke/indent-blankline.nvim'
 
