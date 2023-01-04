@@ -8,7 +8,6 @@ local parsers = {
     "rust",
     "toml",
     "yaml",
-    "sql",
     "make",
     "bash",
 }
