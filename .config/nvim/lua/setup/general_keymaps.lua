@@ -1,4 +1,10 @@
+-- Helper pour afficher le chemin complet du fichier courant
 vim.keymap.set({"n", "v"}, "<leader>pa", ":echo expand('%:p')<CR>")
+
+-- Mouvement de la fenêtre
+-- ------------------------------
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 if Bepo then
     -- Source: https://bepo.fr/wiki/Vim
