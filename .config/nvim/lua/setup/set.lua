@@ -17,7 +17,7 @@ vim.opt.smartcase      = true
 vim.opt.fileignorecase = true
 vim.opt.incsearch      = true
 
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
 vim.opt.mouse = "a"
