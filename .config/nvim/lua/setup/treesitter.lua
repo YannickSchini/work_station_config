@@ -1,6 +1,7 @@
 local parsers = {
     "dockerfile",
     "hcl",
+    "terraform",
     "json",
     "lua",
     "markdown",
@@ -10,11 +11,13 @@ local parsers = {
     "yaml",
     "make",
     "bash",
+    "sql",
 }
 
 require("nvim-treesitter.configs").setup({
+    auto_install = true,
     ensure_installed = parsers,
-    -- highlight = { enable = true },   -- Set to true by default, so not needed anymore
+    highlight = { enable = true },
     indent = { enable = true },
 })
 
