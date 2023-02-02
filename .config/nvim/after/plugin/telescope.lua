@@ -4,6 +4,7 @@ vim.keymap.set("n", "<Leader>ff", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<Leader>rg", ":Telescope live_grep<CR>")
 vim.keymap.set("n", "<Leader>R", ":Telescope lsp_references<CR>")
 vim.keymap.set("n", "<Leader>dd", ":Telescope diagnostics<CR>")
+vim.keymap.set("n", "<Leader>h", ":Telescope help_tags<CR>")
 
 if Bepo then
     vim.keymap.set("n", "<Leader>x", ":Telescope buffers<CR>")
