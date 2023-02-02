@@ -109,7 +109,7 @@ if ! shopt -oq posix; then
 fi
 
 # Set (neo)vim as editor of choice
-export EDITOR=vim
+export EDITOR=nvim
 
 # For nvim to find its config
 export XDG_CONFIG_HOME=$HOME/.config
