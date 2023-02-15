@@ -129,6 +129,9 @@ alias fd=fdfind
 
 source /usr/share/doc/fzf/examples/key-bindings.bash
 
+# Kubectl autocompletion
+source <(kubectl completion bash)
+
 change_background () {
     gsettings set org.gnome.desktop.background picture-uri-dark file:///$(ls ~/Pictures/wallpapers/*.jpg -1 | sort -R | head -1)
 }

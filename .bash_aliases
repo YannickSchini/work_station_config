@@ -8,7 +8,8 @@ alias ....='cd ../../..'
 alias grep=rg
 
 # Kubectl
-# TODO
+alias k=kubectl
+complete -o default -F __start_kubectl k
 
 # Docker
 # TODO
