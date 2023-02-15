@@ -56,7 +56,7 @@ alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
 alias grbi='git rebase -i'
 alias gst='git status'
-alias gup='git pull --rebase'
+alias gup='git pull --rebase --prune'
 
 # setup autocompletion
 if [ -f "/usr/share/bash-completion/completions/git" ]; then
