@@ -121,9 +121,9 @@ eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
 # Enable Pyenv
-export PYENV_ROOT=$HOME/.pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PYENV_ROOT=$HOME/.pyenv
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 alias fd=fdfind
 
