@@ -9,6 +9,7 @@ local servers = {
     "lua_ls",
     "terraformls",
     "yamlls",
+    "ruff_lsp",
 }
 
 require("mason").setup()
