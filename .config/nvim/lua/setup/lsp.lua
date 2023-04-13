@@ -70,7 +70,7 @@ for _, server in ipairs(servers) do
         })
 
     elseif server == "pyright" then
-		server_opts = {
+		local server_opts = {
 			root_dir = get_root_dir,
 			capabilities = capabilities,
 			on_attach = on_attach,
