@@ -17,6 +17,8 @@ vim.opt.smartcase      = true
 vim.opt.fileignorecase = true
 vim.opt.incsearch      = true
 
+vim.g.python3_host_prog = '/home/yannick.schini/.pyenv/versions/neovim/bin/python'
+
 -- vim.opt.foldmethod = "expr"
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99

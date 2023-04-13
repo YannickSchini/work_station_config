@@ -35,7 +35,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 
 local get_root_dir = function(filename, _)
 	local root_files = {
-		"neovim.toml",
+		"pyproject.toml",
 	}
 	local fallback_root_files = {
 		".git",
@@ -73,7 +73,12 @@ for _, server in ipairs(servers) do
 			root_dir = get_root_dir,
 			capabilities = capabilities,
 			on_attach = on_attach,
-		}
+            settings = {
+                python = {
+                    pythonPath = vim.fn.trim(vim.fn.system 'pyenv which python3')
+                }
+            }
+    }
 		lspconfig[server].setup(server_opts)
 
     else
