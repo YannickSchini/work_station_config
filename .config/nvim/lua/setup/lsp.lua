@@ -6,7 +6,7 @@ local servers = {
     "jsonls",
     "pyright",
     "rust_analyzer",
-    "sumneko_lua",
+    "lua_ls",
     "terraformls",
     "yamlls",
 }
@@ -47,7 +47,7 @@ end
 
 for _, server in ipairs(servers) do
 
-    if server == 'sumneko_lua' then
+    if server == 'lua_ls' then
         lspconfig[server].setup({
             settings = {
                 Lua = {
