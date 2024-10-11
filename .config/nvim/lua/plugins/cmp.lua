@@ -5,7 +5,7 @@ return {
 		"L3MON4D3/LuaSnip",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-cmdline",
-		-- "hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-path",
 		"onsails/lspkind.nvim",
 		"hrsh7th/cmp-emoji",
@@ -23,7 +23,7 @@ return {
 
 			sources = cmp.config.sources({
 				{ name = "luasnip" },
-				-- { name = "nvim_lsp" },
+				{ name = "nvim_lsp" },
 				{ name = "buffer" },
 				{ name = "path" },
 				{ name = "emoji" },
