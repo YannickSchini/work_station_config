@@ -39,6 +39,7 @@ return {
                                 disableOrganizeImports = true,
                             },
                             python = {
+                                pythonPath = vim.fn.trim(vim.fn.system 'pyenv which python3'),
                                 analysis = {
                                     -- Ignore all files for analysis to exclusively use Ruff for linting
                                     ignore = { '*' },
