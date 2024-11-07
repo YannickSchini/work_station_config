@@ -1,10 +1,10 @@
-if bepo then
-	keymaps = {
-		change = "ls",
-		change_line = "lS",
-	}
+if Bepo then
+    keymaps = {
+        change = "ls",
+        change_line = "lS",
+    }
 else
-	keymaps = {}
+    keymaps = {}
 end
 
 return {
@@ -13,7 +13,7 @@ return {
     event = "VeryLazy",
     config = function()
         require("nvim-surround").setup({
-		keymaps=keymaps,
+            keymaps = keymaps,
         })
     end
 }
