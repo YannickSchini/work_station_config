@@ -46,14 +46,6 @@ return {
         },
 
         {
-            "<Leader>tg",
-            function()
-                require("telescope.builtin").git_files()
-            end,
-            desc = "Telescope git files",
-        },
-
-        {
             "<Leader>tf",
             function()
                 require("telescope.builtin").find_files()
