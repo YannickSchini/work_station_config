@@ -138,4 +138,10 @@ change_background () {
     gsettings set org.gnome.desktop.background picture-uri-dark file:///$(ls ~/Pictures/wallpapers/*.jpg -1 | sort -R | head -1)
 }
 
+# Add Go and NeoVim to PATH
+export PATH=$PATH:/usr/local/go/bin:/opt/nvim-linux64/bin:/$HOME/go/bin
+
+# For direnv to work
+eval "$(direnv hook bash)"
+
 change_background
