@@ -1,2 +1,3 @@
 .config/nvim/plugin
 .python-version
+.bash_creds.bash

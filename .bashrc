@@ -116,6 +116,9 @@ export EDITOR=nvim
 # For nvim to find its config
 export XDG_CONFIG_HOME=$HOME/.config
 
+# Source credentials
+source .bash_creds.bash
+
 # Enable starship prompt
 eval "$(starship init bash)"
 
