@@ -145,3 +145,13 @@ export PATH=$PATH:/usr/local/go/bin:/opt/nvim-linux64/bin:/$HOME/go/bin
 eval "$(direnv hook bash)"
 
 change_background
+
+add_jira_subtask () {
+    # List issues
+    issue_id=$(jira issue list -a yannick.schini@backmarket.com -t task -s ~Done -s ~Dropped --plain --no-headers | fzf | cut -f 2)
+    # Create subtask
+    subtask_id=$(jira issue create --type Sub-task --parent "$issue_id" --summary "$1" --assignee yannick.schini@backmarket.com --no-input | grep --only-matching BBOX-.*)
+    # Move sub-task to other status
+    [ -z "$2" ]
+    jira issue move "$subtask_id" "$2"
+}
