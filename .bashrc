@@ -117,7 +117,9 @@ export EDITOR=nvim
 export XDG_CONFIG_HOME=$HOME/.config
 
 # Source credentials
-source .bash_creds.bash
+if [ -f ~/.bash_creds.bash ]; then
+    . ~/.bash_creds.bash
+fi
 
 # Enable starship prompt
 eval "$(starship init bash)"
