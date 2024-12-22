@@ -160,3 +160,12 @@ add_jira_subtask () {
     [ -z "$2" ]
     jira issue move "$subtask_id" "$2"
 }
+
+start_zellij() {
+    lsusb | rg "ErgoDox"
+    if [ $? -eq 0 ]; then
+        zellij --config ~/.config/zellij/config.bepo.kdl
+    else
+        zellij --config ~/.config/zellij/config.azerty.kdl
+    fi
+}
