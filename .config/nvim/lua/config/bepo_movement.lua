@@ -55,7 +55,7 @@ map("n", "È", "0")
 
 -- Remaper la gestion des fenêtres
 -- ———————————————————————————————
-map("n", "<C-c>", "<C-w>h")
-map("n", "<C-t>", "<C-w>j")
-map("n", "<C-s>", "<C-w>k")
-map("n", "<C-r>", "<C-w>l")
+-- map("n", "<C-c>", "<C-w>h")
+-- map("n", "<C-t>", "<C-w>j")
+-- map("n", "<C-s>", "<C-w>k")
+-- map("n", "<C-r>", "<C-w>l")

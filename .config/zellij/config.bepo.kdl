@@ -6,6 +6,10 @@ keybinds clear-defaults=true {
     locked {
         bind "Ctrl g" { SwitchToMode "normal"; }
         bind "Alt f" { ToggleFloatingPanes; }
+        bind "Ctrl c" { MoveFocus "left"; }
+        bind "Ctrl t" { MoveFocus "down"; }
+        bind "Ctrl s" { MoveFocus "up"; }
+        bind "Ctrl r" { MoveFocus "right"; }
     }
     pane {
         bind "left" { MoveFocus "left"; }
