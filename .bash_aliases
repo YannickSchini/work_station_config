@@ -1,6 +1,7 @@
 # Utils
 
 alias v=nvim
+alias zel=start_zellij
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
