@@ -127,11 +127,6 @@ eval "$(starship init bash)"
 # Enable zoxide
 eval "$(zoxide init bash)"
 
-# Enable Pyenv
-export PYENV_ROOT=$HOME/.pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 alias fd=fdfind
 
 source /usr/share/doc/fzf/examples/key-bindings.bash
