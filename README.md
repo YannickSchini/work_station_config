@@ -36,6 +36,7 @@ Things to do to setup a machine from a clean Ubuntu/Pop!_OS install:
     rm ~/.bashrc
     stow --ignore=\.git.\* --target ~
     ```
+    (to deploy only one package, use `stow --target=$HOME/.config/jj jj --verbose` for example)
 - Install Docker and perform the installation step to not have to use `sudo` each time
 - Install uLauncher and extensions:
     - the [firefox extension](https://github.com/KuenzelIT/ulauncher-firefox-bookmarks)
