@@ -16,10 +16,10 @@ concat(
 '''
 
 [template-aliases]
-"format_timestamp(timestamp)" = "timestamp.ago()";
+"format_timestamp(timestamp)" = "timestamp.ago()"
 
 [aliases]
-tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"];
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
 
 [ui]
 editor = "nvim"
