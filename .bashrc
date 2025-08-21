@@ -162,9 +162,9 @@ add_jira_subtask () {
 start_zellij() {
     lsusb | rg "ErgoDox"
     if [ $? -eq 0 ]; then
-        zellij --config ~/.config/zellij/config.bepo.kdl
+        zellij --layout compact --config ~/.config/zellij/config.bepo.kdl
     else
-        zellij --config ~/.config/zellij/config.azerty.kdl
+        zellij --layout compact --config ~/.config/zellij/config.azerty.kdl
     fi
 }
 
