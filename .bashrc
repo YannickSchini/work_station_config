@@ -147,8 +147,6 @@ export PATH=$PATH:/usr/local/go/bin:/opt/nvim-linux64/bin:/$HOME/go/bin
 # For direnv to work
 eval "$(direnv hook bash)"
 
-change_background
-
 add_jira_subtask () {
     # List issues
     issue_id=$(jira issue list -a yannick.schini@backmarket.com -t task -s ~Done -s ~Dropped --plain --no-headers | fzf | cut -f 2)
@@ -171,3 +169,7 @@ start_zellij() {
 update_kitty() {
     curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin launch=n
 }
+ 
+change_background
+
+fortune ~/Documents/work_station_config/habits/habits | boxes -d parchment

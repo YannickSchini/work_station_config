@@ -1,0 +1,17 @@
+In Azerty, use F1 to get the Zellij tooltip
+%
+When in Neovim, use ctrl-g to access Zellij's keys
+%
+Use ctrl + movement key to move around panes - whether in Zellij or NeoVim !
+%
+Use `z` to move around folders you already have been in
+%
+Use `tldr` for a quick recap of how to use your tools !
+%
+Stop using Ctrl-Z to go back to your terminal, use Zellij's floating terminal with alt-f
+%
+Use the `jj tug` alias to move a Jujutsu Bookmark from a previous revision to the current one
+%
+Use `jj bookmark track <branch-name>@origin` to work on a branch from GitHub
+%
+Update the fortune data file with `strfile habits habits.dat`
