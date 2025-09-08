@@ -1,4 +1,8 @@
-vim.lsp.enable({ "ruff", "pyright", "lua_ls" })
+vim.lsp.enable({
+    "ruff",
+    "basedpyright",
+    "lua_ls",
+})
 
 vim.diagnostic.config({
     -- virtual_text = true,

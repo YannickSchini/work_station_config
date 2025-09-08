@@ -1,7 +1,7 @@
 return {
-    cmd = { "pyright-langserver", "--stdio" },
+    cmd = { "basedpyright-langserver", "--stdio" },
     filetypes = { "python" },
-    root_markers = { ".git", ".jj" , "pyproject.toml"},
+    root_markers = { ".git", ".jj", "pyproject.toml" },
     settings = {
         -- Using Ruff's import organizer
         disableOrganizeImports = true,
