@@ -1,7 +1,6 @@
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
-        "hrsh7th/cmp-nvim-lsp",
         "neovim/nvim-lspconfig",
         { "VonHeikemen/lsp-zero.nvim", branch = "v4.x" },
     },
@@ -18,7 +17,6 @@ return {
         require("lsp-zero").extend_lspconfig({
             sign_text = true,
             lsp_attach = lsp_attach,
-            capabilities = require("cmp_nvim_lsp").default_capabilities(),
         })
     end,
 }
