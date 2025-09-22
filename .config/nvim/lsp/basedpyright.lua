@@ -12,5 +12,8 @@ return {
                 ignore = { '*' },
             },
         },
+        basedpyright = {
+            typeCheckingMode = "basic",
+        }
     }
 }
