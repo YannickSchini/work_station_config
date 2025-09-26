@@ -10,6 +10,7 @@ return {
                 "lua_ls",
                 "ruff",
                 "basedpyright",
+                "gopls",
             },
         })
     end,
