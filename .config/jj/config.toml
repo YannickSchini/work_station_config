@@ -24,3 +24,4 @@ tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
 
 [ui]
 editor = "nvim"
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
